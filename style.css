@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template: 200px repeat(3, 1fr) / 250px repeat(3, 1fr);
+}
+
+header {
+  z-index: 1;
+  padding: 24px 48px 12px 6px;
+  background-color: #fff;
+  grid-column: 2 / -1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+nav {
+  color: #fff;
+  z-index: 2;
+  padding-top: 24px;
+  background-color: #339af0;
+  grid-row: 1 / -1;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 24px;
+  background-color: #dee2e6;
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+}
+
+/* Header Styling */
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-header {
+  margin-top: 36px;
+  margin-left: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-left: 36px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  background-color: #339af0;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-profile img + p {
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  top: -12px;
+  left: 12px;
+  display: inline-block;
+}
+
+.main-profile img + p::before {
+  font-size: 14px;
+  content: "Hi there,";
+  position: absolute;
+  top: -24px;
+}
+
+input[type="search"] {
+  border: none;
+  height: 32px;
+  width: 600px;
+  border-radius: 100px;
+  background-color: #dee2e6;
+  padding: 12px;
+}
+
+/* Nav Styling */
+h1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+  margin-left: 16px;
+}
+
+hr {
+  width: 95%;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.topic {
+  margin-top: 64px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic p {
+  cursor: pointer;
+  margin-left: -28px;
+  text-align: left;
+  width: 150px;
+}
+
+/* Images Styling */
+.icon {
+  height: 24px;
+}
+
+h1 .icon {
+  height: 36px;
+  fill: #fff;
+}
+
+.nav-icon {
+  position: relative;
+  top: 5px;
+  left: -16px;
+  height: 24px;
+  fill: #fff;
+}
+
+.profile-picture {
+  border-radius: 50%;
+}
+
+.bg-profile-picture {
+  height: 64px;
+}
+
+.sm-profile-picture {
+  height: 42px;
+}
+
+/* Main Styling */
+main p {
+  line-height: 1.2;
+}
+
+.projects {
+  display: grid;
+  grid-template: repeat(3, 200px) / repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.project {
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 12px solid #fcc419;
+  background-color: #fff;
+  overflow-y: auto;
+  position: relative;
+}
+
+.project p {
+  margin-top: 8px;
+  color: #495057;
+}
+
+.project-icons {
+  display: flex;
+  justify-content: end;
+  gap: 24px;
+  bottom: -24px;
+  position: relative;
+}
+
+.main-left,
+.main-right {
+  height: 700px;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  gap: 16px;
+  margin-left: 18px;
+}
+
+.main-right div {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.announcements {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.announcements p {
+  margin-top: 8px;
+  color: #495057;
+  font-size: 12px;
+}
+
+.trending {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.trending p {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.trending span {
+  display: block;
+  position: relative;
+  color: #495057;
+}
+
+.account {
+  display: flex;
+  margin-bottom: -24px !important;
+  align-items: center;
+}
+
+.account p {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.account p:nth-child(2) {
+  color: #495057;
+}
+
+.account-user {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1200px) {
+  input[type="search"] {
+    width: 300px;
+  }
+}
